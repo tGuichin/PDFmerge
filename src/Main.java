@@ -125,6 +125,7 @@ public class Main extends Application {
                             try {
                                 InputStream in = new FileInputStream(s);
                                 BufferedImage bImg = ImageIO.read(in);
+                  
                                 float width = bImg.getWidth();
                                 float height = bImg.getHeight();
                                 PDPage page = new PDPage(new PDRectangle(width, height));
@@ -185,8 +186,8 @@ public class Main extends Application {
         GridPane.setConstraints(saveDirectory, 3, 0);
         GridPane.setConstraints(clear,
                 4, 0);
-        GridPane.setConstraints(fileNameHolder, 0, 1, 4, 1);
-        GridPane.setConstraints(area, 0, 2, 4, 1);
+        GridPane.setConstraints(fileNameHolder, 0, 1, 5, 1);
+        GridPane.setConstraints(area, 0, 2, 5, 1);
         root.setHgap(
                 5);
         root.setVgap(
@@ -194,8 +195,10 @@ public class Main extends Application {
         root.getChildren()
                 .addAll(open, merge, convert, saveDirectory, clear, fileNameHolder, area);
 
-        Scene scene = new Scene(root, 550, 300);
+        Scene scene = new Scene(root, 550, 250);
 
+        scene.getStylesheets().add("style.css");
+        
         stage.setTitle(
                 "PDF Edit");
         stage.setScene(scene);

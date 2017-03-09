@@ -1,0 +1,19 @@
+/* 
+    Created on : Mar 6, 2017, 5:31:13 PM
+    Author     : Rando
+*/
+
+.root{
+    -fx-background-color: #383838;
+    -fx-font-size: 8pt;
+}
+
+.button{
+    -fx-font-weight: bold;
+}
+
+.button:hover{
+    -fx-background-color: silver;
+    -fx-text-fill: darkblue;
+    -fx-background-radius: 5;
+}
